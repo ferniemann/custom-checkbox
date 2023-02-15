@@ -2,12 +2,19 @@
   box-sizing: border-box;
 }
 
+html {
+  color: black;
+  font-size: 16px;
+}
+
 body {
   margin: 0px;
 }
 
-h1 {
-  all: unset;
+a {
+  color: inherit;
+  text-decoration-color: red;
+  text-underline-offset: 3px;
 }
 
 #check {
@@ -18,6 +25,10 @@ h1 {
   background-color: black;
 }
 
+#check:focus + label > .box {
+  outline: 2px dotted red;
+}
+
 .box {
   display: inline-block;
   margin-left: 5px;
@@ -25,4 +36,51 @@ h1 {
   width: 20px;
   outline: 2px solid black;
   border: 2px solid white;
+}
+
+button:focus {
+  outline: 2px dotted red;
+}
+
+div {
+  background-color: lightsalmon;
+
+  width: 200px;
+  margin-inline: auto;
+}
+
+span {
+  background-color: salmon;
+
+  width: 200px;
+  _margin-bottom: 50px;
+}
+
+p {
+  color: dodgerblue;
+}
+
+.inner-text {
+  background-color: transparent;
+  color: inherit;
+}
+
+nav {
+  color: red;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  font-size: 2rem; /*32px*/
+  background-color: salmon;
+
+  border: none;
+  padding: 0.25rem 0.75rem; /*4px 12px*/
+}
+
+.em {
+  padding: 0.25em 0.75em; /*8px 24px*/
 }
